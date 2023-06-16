@@ -1,5 +1,4 @@
-import { AppBar, Button, IconButton, Toolbar, } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
+import { AppBar, Button,  Toolbar } from "@mui/material";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import CartWidget from "../CartWidget/CartWidget";
 import { Link } from "react-router-dom";
@@ -9,11 +8,8 @@ const NavBar = () => {
     <>
       <AppBar position="static" color="success">
         <Toolbar>
-          <IconButton>
-            <MenuIcon />
-          </IconButton>
           <Button color="inherit" component={Link} to={"/"}>
-            Mi Tienda
+            Finas Bebidas
           </Button>
           <Button color="inherit" component={Link} to={"/category/wine"}>
             Wine
@@ -24,11 +20,11 @@ const NavBar = () => {
           <Button color="inherit" component={Link} to={"/category/gin"}>
             Gin
           </Button>
-          <IconButton>
+          <Button color="inherit" component={Link} to={"/cart"}>
             <AddShoppingCartIcon>
               <CartWidget />
             </AddShoppingCartIcon>
-          </IconButton>
+          </Button>
         </Toolbar>
       </AppBar>
     </>

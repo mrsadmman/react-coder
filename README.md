@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+##E-commerce Finas Bebidas
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+LINK [Finas Bebidas]().
 
-## Available Scripts
+###Frameworks, Librerías y sus versiones
 
-In the project directory, you can run:
+[![Generic badge](https://img.shields.io/badge/NODE-18.12.1-<COLOR>.svg)](https://shields.io/)
 
-### `npm start`
+[![Generic badge](https://img.shields.io/badge/NPM-8.19.2-<COLOR>.svg)](https://shields.io/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[![Generic badge](https://img.shields.io/badge/REACT-18.2.0-<COLOR>.svg)](https://shields.io/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+[![Generic badge](https://img.shields.io/badge/REACT.DOM-18.2.0-<COLOR>.svg)](https://shields.io/)
 
-### `npm test`
+[![Generic badge](https://img.shields.io/badge/REACT.RUTER.DOM-6.11.0-<COLOR>.svg)](https://shields.io/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[![Generic badge](https://img.shields.io/badge/FIREBASE-9.22.0-<COLOR>.svg)](https://shields.io/)
 
-### `npm run build`
+[![Generic badge](https://img.shields.io/badge/BOOTSTRAP-5.2.3-<COLOR>.svg)](https://shields.io/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[![Generic badge](https://img.shields.io/badge/MUI-5.13.5-<COLOR>.svg)](https://shields.io/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+###Comandos
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Create a new Raect app **npx create-react-app**
 
-### `npm run eject`
+Develop mode **npm start**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+React Router Dom **npm install react-router-dom**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Firebase v **npm install firebase**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Deploy **npm run build**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+###Descripción
 
-## Learn More
+Proyecto de ecommerce realizado en React, se visualizan los productos de la tienda, almacenados en Firebase, donde también se genera una orden de compra asignándole un ID.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+####Home y Categorías
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+En el home del proyecto aparecen todos los productos disponibles y una barra de navegación con la cual se podrán filtrar por categorías.
 
-### Code Splitting
+####Productos
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Los productos cuentan con una imagen ilustrativa y descriptiva, que se muestra en una card con la información del nombre del producto, precio, y la posibilidad de ir al detalle del mismo.
 
-### Analyzing the Bundle Size
+####Detalle
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+En el detalle del producto se podrá agregar al carrito de comprar la cantidad deseada que será chequeda con la cantidad informada en el stock, de seleccionar una cantidad mayor, la página avisará que no se puede realizar dicha petición.
 
-### Making a Progressive Web App
+####Carrito
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+El carrito de compras recibirá la información seleccionada por el comprador y mostrará el detalle de los productos selecionado, la cantidad, el subtotal y el total de la compra.
+En el Cart se tendrá la opción de limpiar el carrito o borrar items, e ir a un formulario para realizar la compra.
 
-### Advanced Configuration
+####Formulario
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Para generar la orden de comprar el usuario deberá completar un formulario con una doble validación, una vez que se cumplen los requisitos al completar la información requerida, se habilitará el botón para generar la orden, donde se mostrará el ID de la compra.

@@ -1,45 +1,34 @@
-import {
-  AppBar,
-  Button,
-  Drawer,
-  IconButton,
-  Toolbar,
-  Typography,
-} from "@mui/material";
+import { AppBar, Button,  Toolbar } from "@mui/material";
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import CartWidget from "../CartWidget/CartWidget";
-import NavListDrawer from "./NavListDrawer";
-import { useState } from "react";
-import MenuIcon from "@mui/icons-material/Menu";
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import { Link } from "react-router-dom";
 
-export default function NavBar() {
-  const [open, setOpen] = useState(false);
-
+const NavBar = () => {
   return (
     <>
       <AppBar position="static" color="success">
         <Toolbar>
-          <IconButton
-            color="inherit"
-            size="large"
-            onClick={() => setOpen(true)}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" sx={{ flexGrow: 1 }}>
-            Mi Tienda
-          </Typography>
-          <Button color="inherit">Boton 1</Button>
-          <Button color="inherit">Boton 2</Button>
-          <IconButton>
-          <AddShoppingCartIcon />
-          </IconButton>
+          <Button color="inherit" component={Link} to={"/"}>
+            Finas Bebidas
+          </Button>
+          <Button color="inherit" component={Link} to={"/category/wine"}>
+            Wine
+          </Button>
+          <Button color="inherit" component={Link} to={"/category/whisky"}>
+            Whisky
+          </Button>
+          <Button color="inherit" component={Link} to={"/category/gin"}>
+            Gin
+          </Button>
+          <Button color="inherit" component={Link} to={"/cart"}>
+            <AddShoppingCartIcon>
+              <CartWidget />
+            </AddShoppingCartIcon>
+          </Button>
         </Toolbar>
       </AppBar>
-
-      <Drawer open={open} anchor="left" onClose={() => setOpen(false)}>
-        <NavListDrawer />
-      </Drawer>
     </>
   );
-}
+};
+
+export default NavBar;
